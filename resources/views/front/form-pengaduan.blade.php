@@ -2,6 +2,11 @@
 
 @section('title','Form Pengaduan')
 
+@section('css')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+@endsection
+
+
 @section('content')
 <div class="page-heading">
     <h3>Form Pengaduan Masyarakat</h3>
@@ -60,6 +65,25 @@
                                     </div>
                                 </div>
                             </form>
+                            @if(session('msg'))
+                                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+                                <script>
+                                    Swal.fire({
+                                        toast: true,
+                                        position: 'top-end',
+                                        icon: 'success',
+                                        title: "{{ session('msg') }}",
+                                        showConfirmButton: false,
+                                        timer: 3000,
+                                        timerProgressBar: true,
+                                        didOpen: (toast) => {
+                                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                        }
+                                    });
+                                </script>
+                            @endif
+
                         </div>
                     </div>
                 </div>

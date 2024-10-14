@@ -93,78 +93,25 @@
                                 </tr>
                             </thead>
                             <tbody>
+
+                                @forelse ($jarwos as $jarwo)
                                 <tr>
-                                    <td><img src="https://via.placeholder.com/50" alt="Gambar 1"></td>
-                                    <td>John Doe</td>
-                                    <td>Pengaduan Kebersihan</td>
-                                    <td><span class="badge bg-success">Selesai</span></td>
+                                    <td><img src="{{asset('storage/complaints')}}/{{$jarwo->image}}" alt="{{$jarwo->image}}"></td>
+                                    <td>{{$jarwo->guest_name}}</td>
+                                    <td>{{$jarwo->title}}</td>
+                                    @if ($jarwo->status == 'pending')
+                                    <td><span class="badge bg-danger">{{$jarwo->status}}</span></td>
+                                    @elseif ($jarwo->status == 'selesai')
+                                    <td><span class="badge bg-success">{{$jarwo->status}}</span></td>
+                                    @elseif ($jarwo->status == 'success')
+                                    <td><span class="badge bg-proses">{{$jarwo->status}}</span></td>
+                                    @endif
                                 </tr>
+                                @empty
                                 <tr>
-                                    <td><img src="https://via.placeholder.com/50/ff7f7f" alt="Gambar 2"></td>
-                                    <td>Jane Smith</td>
-                                    <td>Pengaduan Lalu Lintas</td>
-                                    <td><span class="badge bg-warning">Pending</span></td>
+                                    <td colspan="4">Data Kosong</td>
                                 </tr>
-                                <tr>
-                                    <td><img src="https://via.placeholder.com/50/7f7fff" alt="Gambar 3"></td>
-                                    <td>Ali Ahmad</td>
-                                    <td>Pengaduan Kerusakan Jalan</td>
-                                    <td><span class="badge bg-danger">Dalam Proses</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="https://via.placeholder.com/50" alt="Gambar 1"></td>
-                                    <td>John Doe</td>
-                                    <td>Pengaduan Kebersihan</td>
-                                    <td><span class="badge bg-success">Selesai</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="https://via.placeholder.com/50/ff7f7f" alt="Gambar 2"></td>
-                                    <td>Jane Smith</td>
-                                    <td>Pengaduan Lalu Lintas</td>
-                                    <td><span class="badge bg-warning">Pending</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="https://via.placeholder.com/50/7f7fff" alt="Gambar 3"></td>
-                                    <td>Ali Ahmad</td>
-                                    <td>Pengaduan Kerusakan Jalan</td>
-                                    <td><span class="badge bg-danger">Dalam Proses</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="https://via.placeholder.com/50" alt="Gambar 1"></td>
-                                    <td>John Doe</td>
-                                    <td>Pengaduan Kebersihan</td>
-                                    <td><span class="badge bg-success">Selesai</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="https://via.placeholder.com/50/ff7f7f" alt="Gambar 2"></td>
-                                    <td>Jane Smith</td>
-                                    <td>Pengaduan Lalu Lintas</td>
-                                    <td><span class="badge bg-warning">Pending</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="https://via.placeholder.com/50/7f7fff" alt="Gambar 3"></td>
-                                    <td>Ali Ahmad</td>
-                                    <td>Pengaduan Kerusakan Jalan</td>
-                                    <td><span class="badge bg-danger">Dalam Proses</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="https://via.placeholder.com/50" alt="Gambar 1"></td>
-                                    <td>John Doe</td>
-                                    <td>Pengaduan Kebersihan</td>
-                                    <td><span class="badge bg-success">Selesai</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="https://via.placeholder.com/50/ff7f7f" alt="Gambar 2"></td>
-                                    <td>Jane Smith</td>
-                                    <td>Pengaduan Lalu Lintas</td>
-                                    <td><span class="badge bg-warning">Pending</span></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="https://via.placeholder.com/50/7f7fff" alt="Gambar 3"></td>
-                                    <td>Ali Ahmad</td>
-                                    <td>Pengaduan Kerusakan Jalan</td>
-                                    <td><span class="badge bg-danger">Dalam Proses</span></td>
-                                </tr>
+                                @endforelse
                             </tbody>
                         </table>
                     </div>

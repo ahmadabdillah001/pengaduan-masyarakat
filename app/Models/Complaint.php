@@ -19,5 +19,12 @@ class Complaint extends Model
         'guest_email',
         'guest_telp',
     ];
+
+    protected function image(): Complaint
+    {
+        return Complaint::make(
+            get: fn ($image) => url('/storage/posts/' . $image),
+        );
+    }
     
 }

@@ -22,7 +22,7 @@ class FrontComplaintController extends Controller
         $complaint->guest_email = $request->email;
         $complaint->guest_telp = $request->telp;
         $complaint->description = $request->desk;
-        $complaint->image = $image;
+        $complaint->image = $image->hashName();
 
         $complaint->save();
 
