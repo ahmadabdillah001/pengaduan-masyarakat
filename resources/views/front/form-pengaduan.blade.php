@@ -63,7 +63,7 @@
                                         <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
                                     </div>
                                 </div>
-                            </form>  
+                            </form> 
                             @if(session('msg'))
                                 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
                                 <script>

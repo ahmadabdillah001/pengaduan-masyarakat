@@ -42,16 +42,23 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php $i = 1; ?>
                         @forelse ($complaints as $complaint)
 
                             <tr>
-                                <td>1</td>
+                                <td>{{$i++}}</td>
                                 <td>{{$complaint->guest_name}}</td>
                                 <td>{{$complaint->guest_email}}</td>
                                 <td>{{$complaint->guest_telp}}</td>
                                 <td>{{$complaint->title}}</td>
                                 <td>
-                                    <span class="badge bg-success">Active</span>
+                                    @if ($complaint->status == 'pending')
+                                        <span class="badge bg-danger">Pending</span>
+                                    @elseif ($complaint->status == 'proses')
+                                        <span class="badge bg-warning">Proses</span>
+                                    @else
+                                        <span class="badge bg-success">Selesai</span>
+                                    @endif
                                 </td>
                                 <td>Edit</td>
                             </tr>

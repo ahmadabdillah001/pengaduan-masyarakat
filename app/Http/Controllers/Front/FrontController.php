@@ -24,6 +24,15 @@ class FrontController extends Controller
 
     public function statistikPengaduan()
     {
-        return view('front.statistik');
+        $all = Complaint::count();
+        $pending = Complaint::where('status', 'pending')->count();
+        $proses = Complaint::where('status', 'proses')->count();
+        $selesai = Complaint::where('status', 'selesai')->count();
+        return view('front.statistik', [
+            'all' => $all,
+            'pending' => $pending,
+            'proses' => $proses,
+            'selesai' => $selesai,
+        ]);
     }
 }
