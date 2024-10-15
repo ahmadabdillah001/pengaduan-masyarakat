@@ -8,6 +8,7 @@
      <link rel="stylesheet" href="{{asset('mazer/assets/compiled/css/app.css')}}">
     <link rel="stylesheet" href="{{asset('mazer/assets/compiled/css/app-dark.css')}}">
     <link rel="stylesheet" href="{{asset('mazer/assets/compiled/css/iconly.css')}}">
+    @yield('css')
     <style>
         .logo-pengaduan{
             width: 160px;
@@ -37,5 +38,6 @@
     <script src="{{asset('mazer/assets/compiled/js/app.js')}}"></script>
     <script src="{{asset('mazer/assets/extensions/apexcharts/apexcharts.min.js')}}"></script>
     <script src="{{asset('mazer/assets/static/js/pages/dashboard.js')}}"></script>
+    @yield('js')
 </body>
 </html>

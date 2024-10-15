@@ -13,6 +13,6 @@ class UserRoleController extends Controller
     {
         $complaints = Complaint::where('user_id', Auth::user()->id)->get();
         // return $complaints;
-        return view('dashboard.user-role.riwayat-pengaduan');
+        return view('dashboard.user-role.riwayat-pengaduan', ['complaints' => $complaints, ]);
     }
 }
