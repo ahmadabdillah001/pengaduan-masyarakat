@@ -1,7 +1,10 @@
-<p align="center"><img src="https://raw.githubusercontent.com/Programmer-2024/Public-Complaints/refs/heads/master/public/images/adu.png?token=GHSAT0AAAAAACVWLE5F6XH7ZBZVPN7QDV2AZYODHNA" style="width: 260px; height: auto !important;" alt="Public Complaints Logo"></p>
+<p align="center">
+<a href='https://postimg.cc/bSgsxJFd' target='_blank'><img src='https://i.postimg.cc/bSgsxJFd/adu.png' style="width: 260px; height: auto !important;" alt='adu'/></a></p>
 
 <p align="center">
+<a href='https://postimg.cc/DWckyXWW' target='_blank'>
 <img src="https://i.postimg.cc/s2kVmPsJ/Whats-App-Image-2024-10-15-at-14-44-00.jpg" style="width: 100%; height: auto !important;" alt="Public Complaints Picture">
+</a>
 </p>
 
 ## About Public Complaints
