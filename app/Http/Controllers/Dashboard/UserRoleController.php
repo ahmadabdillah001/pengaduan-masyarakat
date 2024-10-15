@@ -12,7 +12,8 @@ class UserRoleController extends Controller
     public function riwayatPengaduan()
     {
         $complaints = Complaint::where('user_id', Auth::user()->id)->get();
-        // return $complaints;
-        return view('dashboard.user-role.riwayat-pengaduan');
+        return view('dashboard.user-role.riwayat-pengaduan',[
+            'complaints' => $complaints,
+        ]);
     }
 }
