@@ -1,28 +1,24 @@
-<p align="center"><img src="https://raw.githubusercontent.com/Programmer-2024/Public-Complaints/refs/heads/master/public/images/adu.png?token=GHSAT0AAAAAACVWLE5F6XH7ZBZVPN7QDV2AZYODHNA" style="width: 160px; height: auto !important;" alt="Public Complaints Logo"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Programmer-2024/Public-Complaints/refs/heads/master/public/images/adu.png?token=GHSAT0AAAAAACVWLE5F6XH7ZBZVPN7QDV2AZYODHNA" style="width: 260px; height: auto !important;" alt="Public Complaints Logo"></p>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<img src="https://i.postimg.cc/s2kVmPsJ/Whats-App-Image-2024-10-15-at-14-44-00.jpg" style="width: 100%; height: auto !important;" alt="Public Complaints Picture">
 </p>
 
 ## About Public Complaints
 
-Public Complaints adalah aplikasi berbasis web yang memungkinkan pengguna untuk melaporkan keluhan publik dengan mudah.
+Public Complaints is a web-based application that allows users to easily report public complaints.
 
 ## Prerequisites
 
-Sebelum memulai, pastikan Anda memiliki:
+Before you start, make sure you have:
 
 - PHP >= 8.2
 - Composer
-- MySQL atau database lain yang didukung
-- Node.js dan npm (jika menggunakan frontend assets)
+- MySQL or other supported database
 
-## Langkah-langkah Instalasi
+## Installation Steps
 
-Ikuti langkah-langkah berikut untuk meng-clone proyek ini dan menjalankannya di lokal:
+Follow these steps to clone this project and run it locally:
 
 ### 1. Clone Repository
 
@@ -32,15 +28,15 @@ Clone repositori ini ke mesin lokal Anda menggunakan git:
 git clone https://github.com/Programmer-2024/Public-Complaints.git
 ```
 
-## Jalankan di Local
+## 2. Run on Local
 
-Setelah berhasil cloning project maka ikuti langkah-langkah berikut ini:
+After successfully cloning the project, follow these steps:
 
 - cd Public-Complaints
 - composer install
 - cp .env.example .env
-- Edit terlebih dahulu koneksi ke databse
+- edit the connection to the database first
 - php artisan key:generate
 - php artisan migrate --seed
 - php artisan serve
-- silahkan buka http://localhost:8000
+- please open http://localhost:8000
