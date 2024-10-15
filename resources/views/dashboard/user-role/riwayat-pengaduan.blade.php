@@ -3,5 +3,5 @@
 @section('title', 'Riwayat Pengaduan')
 
 @section('content')
-Riwayat
+Riwayat Update
 @endsection
