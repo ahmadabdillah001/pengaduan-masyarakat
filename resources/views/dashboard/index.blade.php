@@ -17,11 +17,7 @@
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                     <h6 class="text-muted font-semibold">Total Pengaduan</h6>
-<<<<<<< HEAD
                                     <h6 class="font-extrabold mb-0">{{$all}}</h6>
-=======
-                                    <h6 class="font-extrabold mb-0">112.000</h6>
->>>>>>> 7b6c9e5514db295fdfb1fefd7232e37ef98bf9f6
                                 </div>
                             </div>
                         </div>
@@ -38,11 +34,7 @@
                                 </div>
                                 <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                     <h6 class="text-muted font-semibold">Pending</h6>
-<<<<<<< HEAD
                                     <h6 class="font-extrabold mb-0">{{$pending}}</h6>
-=======
-                                    <h6 class="font-extrabold mb-0">183.000</h6>
->>>>>>> 7b6c9e5514db295fdfb1fefd7232e37ef98bf9f6
                                 </div>
                             </div>
                         </div>
