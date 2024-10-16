@@ -10,10 +10,11 @@
         margin-top: 20px;
     }
     .table {
-        border-radius: 10px;
+        border-radius: 0px !important;
         overflow: hidden;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
         width: 100%;
+        margin-top: 14px !important;
         margin: auto;
         border-collapse: collapse;
     }
@@ -24,10 +25,10 @@
         border-bottom: 1px solid #e0e0e0;
     }
     .table th {
-        background-color: #007bff; /* Solid color for the header */
-        color: white;
-        font-size: 1.1em;
-        font-weight: bold;
+        background-color: #306c90 !important; /* Solid color for the header */
+        color: white !important;
+        font-size: 1.1em !important;
+        font-weight: bold !important;
         text-transform: uppercase;
         text-align: center !important; /* Center text in header */
     }
@@ -98,15 +99,7 @@
                                         <td><img src="{{$complaint->image}}" alt="{{$complaint->title}}"></td>
                                         <td>{{$complaint->guest_name}}</td>
                                         <td>{{$complaint->title}}</td>
-                                        <td>
-                                            @if($complaint->status == 'pending')
-                                                <span class="badge bg-danger">{{$complaint->status}}</span>
-                                            @elseif($complaint->status == 'selesai')
-                                                <span class="badge bg-success">{{$complaint->status}}</span>
-                                            @else
-                                                <span class="badge bg-warning">{{$complaint->status}}</span>
-                                            @endif
-                                        </td>
+                                        <td>{!! $complaint->status_badge !!}</td>
                                     </tr>  
                                 @empty
                                     <tr>

@@ -45,6 +45,10 @@
             100% { transform: rotate(360deg); }
         }
 
+        .cursor-not-allowed {
+            cursor: not-allowed;
+        }
+
     </style>
 </head>
 
