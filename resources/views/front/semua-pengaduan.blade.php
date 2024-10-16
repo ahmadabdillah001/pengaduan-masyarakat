@@ -10,11 +10,18 @@
         margin-top: 20px;
     }
     .table {
+<<<<<<< HEAD
         border-radius: 0px !important;
         overflow: hidden;
         /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
         width: 100%;
         margin-top: 14px !important;
+=======
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+>>>>>>> 7b6c9e5514db295fdfb1fefd7232e37ef98bf9f6
         margin: auto;
         border-collapse: collapse;
     }
@@ -25,10 +32,17 @@
         border-bottom: 1px solid #e0e0e0;
     }
     .table th {
+<<<<<<< HEAD
         background-color: #306c90 !important; /* Solid color for the header */
         color: white !important;
         font-size: 1.1em !important;
         font-weight: bold !important;
+=======
+        background-color: #007bff; /* Solid color for the header */
+        color: white;
+        font-size: 1.1em;
+        font-weight: bold;
+>>>>>>> 7b6c9e5514db295fdfb1fefd7232e37ef98bf9f6
         text-transform: uppercase;
         text-align: center !important; /* Center text in header */
     }

@@ -52,5 +52,4 @@ class LoginController extends Controller
             'password.string' => 'Kolom kata sandi harus berupa string.',
         ]);
     }
-
 }
