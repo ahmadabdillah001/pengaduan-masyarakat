@@ -28,7 +28,7 @@ Follow these steps to clone this project and run it locally:
 Clone repositori ini ke mesin lokal Anda menggunakan git:
 
 ```bash
-git clone https://github.com/Programmer-2024/Public-Complaints.git
+git clone https://github.com/ahmadabdillah001/pengaduan-masyarakat.git
 ```
 
 ## 2. Run on Local
