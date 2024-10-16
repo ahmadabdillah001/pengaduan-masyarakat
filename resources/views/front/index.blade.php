@@ -58,6 +58,7 @@
         </div>
     </section>
 
+@if (Auth::user()->role() == 'user')
     <section id="multiple-column-form">
         <div class="row match-height">
             <div class="col-12">
@@ -117,5 +118,6 @@
             </div>
         </div>
     </section>
+@endif
 </div>
 @endsection

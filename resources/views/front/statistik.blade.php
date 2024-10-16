@@ -96,7 +96,7 @@
     <script src="{{asset('mazer/assets/extensions/apexcharts/apexcharts.min.js')}}"></script>
     <script>
         var options = {
-            series: [30, 80, 25],
+            series: [<?= $pending;?>, <?= $proses;?>, <?= $selesai;?>],
             chart: {
                 type: 'pie',
                 height: 350
