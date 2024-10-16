@@ -27,7 +27,6 @@ class DashboardController extends Controller
             $selesai = Complaint::where('user_id', Auth::user()->id)->where('status', 'selesai')->count();
         }
 
-
         return view('dashboard.index', [
             'all' => $all,
             'pending' => $pending,

@@ -16,7 +16,7 @@
             <form method="POST" action="{{ route('register') }}">
             @csrf
                 <div class="form-group position-relative has-icon-left mb-4">
-                    <input type="text" class="form-control form-control-xl @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email">
+                    <input type="email" class="form-control form-control-xl @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email">
                     <div class="form-control-icon">
                         <i class="bi bi-envelope"></i>
                     </div>
@@ -32,6 +32,17 @@
                         <i class="bi bi-person"></i>
                     </div>
                     @error('name')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>                
+                <div class="form-group position-relative has-icon-left mb-4">
+                    <input type="text" class="form-control form-control-xl @error('telp') is-invalid @enderror" name="telp" value="{{ old('telp') }}" placeholder="Phone Number">
+                    <div class="form-control-icon">
+                        <i class="bi bi-person"></i>
+                    </div>
+                    @error('telp')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
