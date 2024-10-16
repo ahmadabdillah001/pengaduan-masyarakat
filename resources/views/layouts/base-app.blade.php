@@ -18,6 +18,9 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        .cursor-pointer{
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -39,5 +42,11 @@
     <!-- <script src="{{asset('mazer/assets/extensions/apexcharts/apexcharts.min.js')}}"></script> -->
     <!-- <script src="{{asset('mazer/assets/static/js/pages/dashboard.js')}}"></script> -->
     @yield('js')
+    <script>
+        function logout(){
+            event.preventDefault();
+            document.getElementById('logout-form').submit();
+        }
+    </script>
 </body>
 </html>
