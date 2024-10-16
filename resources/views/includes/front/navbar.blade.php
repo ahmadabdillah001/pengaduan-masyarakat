@@ -20,10 +20,20 @@
                             </div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="topbarUserDropdown">
-                            <li><a class="dropdown-item" href="#">My Account</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="{{ auth()->user()->isAdmin() ? route('admin.index') : route('user.index') }}">My Dashboard</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li> <!-- Assuming you have a named route for logout -->
+                            <li>
+                                <!-- <a class="dropdown-item" href="{{ route('logout') }}">Logout</a> -->
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                            </li>
                         </ul>
                     </div>
                 @else

@@ -21,6 +21,15 @@ class Complaint extends Model
         'guest_telp',
     ];
 
+    public function getStatusBadgeAttribute()
+    {
+        return match ($this->status) {
+            'pending' => '<span class="badge" style="background-color: #ff7976;">' . strtoupper($this->status) . '</span>',
+            'selesai' => '<span class="badge" style="background-color: #5ddab4;">' . strtoupper($this->status) . '</span>',
+            default => '<span class="badge" style="background-color: #57caeb;">' . strtoupper($this->status) . '</span>',
+        };
+    }
+
     protected function image(): Attribute
     {
         return Attribute::make(
