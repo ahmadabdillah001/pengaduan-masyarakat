@@ -90,7 +90,7 @@
                     <div class="card-content">
                         <div class="card-body">
                         <form class="form" action="" method="POST" enctype="multipart/form-data">
-                        @csrf
+                            @csrf
                                 <div class="row">
                                     <div class="col-md-6 col-12 mb-3">
                                         <div class="form-group">
