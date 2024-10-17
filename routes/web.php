@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Dashboard\DashboardController;
@@ -30,8 +31,10 @@ Route::group(['middleware' => 'auth'], function () {
     // Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
 
-Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
-    Route::get('/', DashboardController::class)->name('admin.index');
+Route::prefix('admin')->middleware(['auth','isAdmin'])->name('admin.')->group(function(){
+    Route::get('/', DashboardController::class)->name('index');
+    Route::get('/semua-pengaduan', [AdminController::class, 'semuaPengaduan'])->name('semua.pengaduan');
+    Route::get('/pengaduan/{id_pengaduan}/tanggapi', [AdminController::class, 'tanggapiPengaduan'])->name('tanggapi.pengaduan');
 });
 
 Route::prefix('user')->middleware(['auth','isUser'])->name('user.')->group(function(){
