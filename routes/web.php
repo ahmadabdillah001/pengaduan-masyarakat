@@ -35,6 +35,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->name('admin.')->group(fu
     Route::get('/', DashboardController::class)->name('index');
     Route::get('/semua-pengaduan', [AdminController::class, 'semuaPengaduan'])->name('semua.pengaduan');
     Route::get('/pengaduan/{id_pengaduan}/tanggapi', [AdminController::class, 'tanggapiPengaduan'])->name('tanggapi.pengaduan');
+    Route::post('/pengaduan/store', [AdminController::class, 'storePengaduan'])->name('store.pengaduan');
 });
 
 Route::prefix('user')->middleware(['auth','isUser'])->name('user.')->group(function(){
