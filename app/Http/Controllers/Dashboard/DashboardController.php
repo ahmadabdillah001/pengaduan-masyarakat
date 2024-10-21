@@ -14,24 +14,29 @@ class DashboardController extends Controller
      */
     public function __invoke(Request $request)
     {
-
         if(Auth::user()->role == 'admin'){
             $all = Complaint::count();
             $pending = Complaint::where('status', 'pending')->count();
             $proses = Complaint::where('status', 'proses')->count();
             $selesai = Complaint::where('status', 'selesai')->count();
+            return view('dashboard.admin-role.index',[
+                'all'       => $all,
+                'pending'   => $pending,
+                'proses'    => $proses,
+                'selesai'   => $selesai,
+            ]);
         }else{
             $all = Complaint::where('user_id', Auth::user()->id)->count();
             $pending = Complaint::where('user_id', Auth::user()->id)->where('status', 'pending')->count();
             $proses = Complaint::where('user_id', Auth::user()->id)->where('status', 'proses')->count();
             $selesai = Complaint::where('user_id', Auth::user()->id)->where('status', 'selesai')->count();
+            return view('dashboard.user-role.index',[
+                'all'       => $all,
+                'pending'   => $pending,
+                'proses'    => $proses,
+                'selesai'   => $selesai,
+            ]);
         }
-
-        return view('dashboard.index', [
-            'all' => $all,
-            'pending' => $pending,
-            'proses' => $proses,
-            'selesai' => $selesai,
-        ]);
+        
     }
 }

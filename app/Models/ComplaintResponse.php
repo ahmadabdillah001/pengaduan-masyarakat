@@ -16,7 +16,6 @@ class ComplaintResponse extends Model
         'image',
     ];
 
-    // Define the relationships
     public function complaint()
     {
         return $this->belongsTo(Complaint::class);

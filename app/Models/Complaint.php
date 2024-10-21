@@ -35,9 +35,9 @@ class Complaint extends Model
         return Attribute::make(
             get: fn ($image) => url('/storage/complaints/' . $image),
         );
-    }    
-
-    public function user()
+    }  
+    
+    public function responses()
     {
         return $this->hasMany(ComplaintResponse::class);
     }

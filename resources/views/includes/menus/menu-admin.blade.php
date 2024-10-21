@@ -9,7 +9,7 @@
 <li
     class="sidebar-item {{ Route::currentRouteName() === 'admin.semua.pengaduan' ? 'active' : '' }}">
     <a href="{{route('admin.semua.pengaduan')}}" class='sidebar-link'>
-        <i class="bi bi-grid-fill"></i>
+        <i class="bi bi-info-circle-fill"></i>
         <span>Lihat Pengaduan</span>
     </a>
 </li>
