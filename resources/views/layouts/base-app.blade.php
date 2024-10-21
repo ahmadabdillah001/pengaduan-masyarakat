@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Dashboard')</title>
     <link rel="shortcut icon" href="{{ asset('images/cs.png') }}" type="image/x-icon">
-     <link rel="stylesheet" href="{{asset('mazer/assets/compiled/css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('mazer/assets/compiled/css/app.css')}}">
     <link rel="stylesheet" href="{{asset('mazer/assets/compiled/css/app-dark.css')}}">
     <link rel="stylesheet" href="{{asset('mazer/assets/compiled/css/iconly.css')}}">
     @yield('css')
@@ -24,12 +24,14 @@
 <body>
     <script src="{{asset('mazer/assets/static/js/initTheme.js')}}"></script>
     <div id="app">
+        
         @include('includes.sidebar')
         <div id="main" class="layout-navbar navbar-fixed">
             @include('includes.navbar')            
             <div id="main-content">
                 @yield('content')
             </div>
+        
             @include('includes.footer')
         </div>
     </div>
