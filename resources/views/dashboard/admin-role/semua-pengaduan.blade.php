@@ -4,10 +4,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{asset('mazer/assets/extensions/simple-datatables/style.css')}}">
-<<<<<<< HEAD
-=======
 <link rel="stylesheet" href="{{asset('mazer/assets/compiled/css/table-datatable.css')}}">
->>>>>>> 503018aef6000b0cb75f06441d9a3261a42b25ef
 <style>
     .table th, .table td {
         vertical-align: middle;

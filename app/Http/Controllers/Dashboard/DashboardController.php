@@ -19,11 +19,13 @@ class DashboardController extends Controller
             $pending = Complaint::where('status', 'pending')->count();
             $proses = Complaint::where('status', 'proses')->count();
             $selesai = Complaint::where('status', 'selesai')->count();
+            $pengaduanHariIni = Complaint::whereDate('created_at', now()->today())->get();
             return view('dashboard.admin-role.index',[
                 'all'       => $all,
                 'pending'   => $pending,
                 'proses'    => $proses,
                 'selesai'   => $selesai,
+                'pengaduanHariIni' => $pengaduanHariIni,
             ]);
         }else{
             $all = Complaint::where('user_id', Auth::user()->id)->count();

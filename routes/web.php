@@ -26,16 +26,14 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('register', [RegisterController::class, 'register']);
 });
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::post('logout', [LoginController::class, 'logout'])->name('logout');
-    // Route::get('/home', [HomeController::class, 'index'])->name('home');
-});
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::prefix('admin')->middleware(['auth','isAdmin'])->name('admin.')->group(function(){
     Route::get('/', DashboardController::class)->name('index');
     Route::get('/semua-pengaduan', [AdminController::class, 'semuaPengaduan'])->name('semua.pengaduan');
     Route::get('/pengaduan/{id_pengaduan}/tanggapi', [AdminController::class, 'tanggapiPengaduan'])->name('tanggapi.pengaduan');
     Route::post('/pengaduan/store', [AdminController::class, 'storePengaduan'])->name('store.pengaduan');
+    Route::get('/pengaduan/semua', [AdminController::class, 'semuaUserPengaduan'])->name('semua.user.pengaduan');
 });
 
 Route::prefix('user')->middleware(['auth','isUser'])->name('user.')->group(function(){
